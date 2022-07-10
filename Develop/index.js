@@ -1,12 +1,14 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
+const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type:'input',
         message:'Whats your project name?',
-        name:'projectName',
+        name:'projectTitle',
     },{
         type:'input',
         message:'Whats your project description?',
@@ -16,7 +18,7 @@ const questions = [
         message:'Whats license are you using?',
         //selection array
         choices:['MIT', 'IBM', 'Mozilla', 'None'],
-        name:'projectLicense',
+        name:'license',
     },{
         type:'input',
         message:'Whats your project username?',
@@ -39,15 +41,11 @@ const questions = [
         name:'credit',
     },{
         type:'input',
-        message:'Include any license badges here.',
-        name:'badges',
-    },{
-        type:'input',
         message:'What features would you like others to know about?',
         name:'features',
     },{
         type:'input',
-        message:'What guidelines would you want other futuree contributors to follow?',
+        message:'What guidelines would you want other future contributors to follow?',
         name:'guidelines',
     },{
         type:'input',
@@ -62,27 +60,13 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init(questions) {
+function init() {
+    console.log('question')
     inquirer.prompt(questions).then(response => {
         console.log(response);
+        fs.writeFileSync('README.md', generateMarkdown(response));
     })
 }
 
 // Function call to initialize app
-init(questions);
-
-
-//Tutor input with help understanding node
-// inquirer.prompt([{
-//     type:'input',
-//     message:'whats your name?',
-//     name:'fullName',
-// },{
-//     type:'input',
-
-//     message:'what are your hobbies?',
-//     name:'hobby',
-// }])
-// .then(response=>{
-//     console.log(response);
-// })
+init();
