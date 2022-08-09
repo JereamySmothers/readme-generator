@@ -1,7 +1,7 @@
-# j
+# orm
 
 ## Description
-j
+object relational mapping 
 
 ## Table of Contents (Optional)
 
@@ -11,28 +11,28 @@ j
 - [License](#license)
 
 ## Installation
-j
+dotenv express mysql2 sequelize
 
 ## Usage
-j
+WIP
 
 ## Credits
-j
+ME
 
 ## License
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
+undefined
 
 ## Features
-j
+WIP
 
 ## How to Contribute
-j
+Dont touch at the moment
 
 ## Tests
-j
+NA
 
 ## Question
-j
-j
+JereamySmothers
+jereamyasmothers@gmail.com
 
   
