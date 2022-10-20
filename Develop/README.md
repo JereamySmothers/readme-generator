@@ -1,7 +1,7 @@
-# orm
+# weatherAPI
 
 ## Description
-object relational mapping 
+An application to check a 5-day forcast in a certain area.
 
 ## Table of Contents (Optional)
 
@@ -11,10 +11,10 @@ object relational mapping
 - [License](#license)
 
 ## Installation
-dotenv express mysql2 sequelize
+jest and inquirer
 
 ## Usage
-WIP
+launch the application, type in the city you wish to see the 5-day forcast for.
 
 ## Credits
 ME
@@ -23,13 +23,13 @@ ME
 undefined
 
 ## Features
-WIP
+It still has to have some kinks worked out.
 
 ## How to Contribute
-Dont touch at the moment
+If it works it works, but don't forget to comment.
 
 ## Tests
-NA
+None
 
 ## Question
 JereamySmothers
